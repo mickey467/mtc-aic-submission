@@ -2,17 +2,17 @@
 
 Official submission for the MTC-AIC 2026 competition using the **SGLATrack** (Similarity-Guided Layer-Adaptive Vision Transformer) architecture.
 
-## 🚀 Model Checkpoint Download
+## 1. Model Checkpoint Download
 **Download Link:** [(https://drive.google.com/drive/folders/1FITQH29Jp3Xik9Ta9gwS-PaMb0Hc-aqp?usp=sharing)]  
 Please download the `sglatrack_ep0297.pth.tar` file and place it in the `checkpoints/` directory.
 
-## 🛠️ Installation
+## 2. Installation
 Ensure you have Python 3.8+ and a CUDA-enabled environment. Install dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🏃 Inference
+## 3. Inference
 To generate a submission file from the competition manifest, run the following command:
 ```bash
 python inference.py \
@@ -24,11 +24,11 @@ python inference.py \
 ```
 *Note: The script includes compatibility patches for PyTorch 2.0+ and mocks optional dependencies to ensure a smooth run.*
 
-## 📓 Alternative Inference (Kaggle)
+## 4. Alternative Inference (Kaggle)
 We have provided our original production notebooks in the `notebooks/` directory.
 - `notebooks/sglatrack-that-delivered.ipynb`: The notebook that generated our best public LB score.
 
-## 🏋️ Training
+## 5.🏋️ Training
 To train the model from scratch (requires full tracking datasets like LaSOT, GOT-10k, etc.):
 1. Configure your local paths in `src/lib/train/admin/local.py`.
 2. Run the training script:
@@ -42,7 +42,7 @@ python src/tracking/train.py \
     --use_wandb 0
 ```
 
-## 🧠 Methodology
+## 6. Methodology
 
 Our solution is based on the original SGLATrack (Similarity-Guided Layer-Adaptive Transformer) framework for single-object visual tracking. The model uses transformer-based feature representations and adaptive similarity matching to maintain robust tracking performance across challenging UAV sequences.
 
@@ -75,7 +75,7 @@ Additional compatibility patches were implemented for PyTorch 2.0+ and optional 
 
 ---
 
-## 📁 Repository Structure
+## 7. Repository Structure
 ```
 .
 ├── checkpoints/          # Model weights and download links
